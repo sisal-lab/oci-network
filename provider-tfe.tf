@@ -1,3 +1,3 @@
 provider "tfe" {
-  #Environment vars
+  token = var.tfe_token
 }
