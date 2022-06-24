@@ -22,4 +22,8 @@ data "tfe_outputs" "oci_compartment" {
 resource "oci_core_vcn" "main" {
   #Required
   compartment_id = local.compartment_id
+  
+  cidr_blocks = [
+    "192.168.0.0/24"
+  ]
 }
