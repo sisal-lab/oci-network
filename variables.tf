@@ -36,3 +36,7 @@ variable "workspace_oci_compartment" {
 variable "name" {
   type = string
 }
+
+variable "private_subnets" {
+  type = map(string)
+}
