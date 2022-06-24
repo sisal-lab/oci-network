@@ -9,3 +9,8 @@ terraform {
     }
   }
 }
+
+data "tfe_outputs" "oci_compartment" {
+  organization = var.tfe_org
+  workspace = var.workspace_oci_compartment
+}
