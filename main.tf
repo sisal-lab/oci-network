@@ -28,3 +28,16 @@ resource "oci_core_vcn" "main" {
   #Optional
   display_name = var.name
 }
+
+resource "oci_core_subnet" "private_subnets" {
+  for_each = var.private_subnets
+  
+  #Required
+  vcn_id = oci_core_vcn.main.id
+  compartment_id = oci_core_vcn.main.compartment_id
+  cidr_block = each.value
+
+  #Optional
+  display_name = each.key
+  prohibit_public_ip_on_vnic = true
+}
