@@ -23,9 +23,7 @@ resource "oci_core_vcn" "main" {
   #Required
   compartment_id = local.compartment_id
   
-  cidr_blocks = [
-    "192.168.0.0/24"
-  ]
+  cidr_blocks = values(var.private_subnets)
   
   #Optional
   display_name = var.name
