@@ -31,3 +31,8 @@ variable "tfe_org" {
 variable "workspace_oci_compartment" {
   type = string
 }
+
+
+variable "name" {
+  type = string
+}
