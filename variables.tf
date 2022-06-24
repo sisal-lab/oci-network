@@ -19,6 +19,11 @@ variable "fingerprint" {
   type = string
 }
 
+variable "tfe_token" {
+  type = string
+  sensitive = true
+}
+
 variable "tfe_org" {
   type = string
 }
