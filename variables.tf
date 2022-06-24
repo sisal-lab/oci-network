@@ -18,3 +18,11 @@ variable "private_key" {
 variable "fingerprint" {
   type = string
 }
+
+variable "tfe_org" {
+  type = string
+}
+
+variable "workspace_oci_compartment" {
+  type = string
+}
