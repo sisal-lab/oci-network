@@ -40,3 +40,7 @@ variable "name" {
 variable "private_subnets" {
   type = map(string)
 }
+
+variable "public_subnets" {
+  type = map(string)
+}
