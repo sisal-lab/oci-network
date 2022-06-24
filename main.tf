@@ -26,4 +26,7 @@ resource "oci_core_vcn" "main" {
   cidr_blocks = [
     "192.168.0.0/24"
   ]
+  
+  #Optional
+  display_name = var.name
 }
