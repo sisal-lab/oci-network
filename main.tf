@@ -11,7 +11,7 @@ terraform {
 }
 
 locals {
-  compartment_id = data.tfe_outputs.oci_compartment.compartment.id
+  compartment_id = data.tfe_outputs.oci_compartment.values.compartment.id
 }
 
 data "tfe_outputs" "oci_compartment" {
